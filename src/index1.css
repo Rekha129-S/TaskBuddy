@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+  font-family: 'Poppins', sans-serif;
+  min-height: 100vh;
+  background: #f5f7fa;
+  padding: 30px;
+}
+
+/* Main Container */
+.container {
+  width: 100%;
+  max-width: 900px;
+  margin: auto;
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 35px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* Heading */
+h1 {
+  text-align: center;
+  color: #4f46e5;
+  font-size: 3rem;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+h3 {
+  text-align: center;
+  color: #64748b;
+  margin-bottom: 30px;
+  font-weight: 400;
+}
+
+/* Form */
+form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+input {
+  flex: 1;
+  min-width: 250px;
+  padding: 14px;
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  font-size: 16px;
+  outline: none;
+  transition: 0.3s;
+}
+
+input:focus {
+  border-color: #4f46e5;
+}
+
+select {
+  padding: 14px;
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  font-size: 15px;
+  outline: none;
+  cursor: pointer;
+}
+
+select:focus {
+  border-color: #4f46e5;
+}
+
+/* Add Task Button */
+form button {
+  padding: 14px 24px;
+  border: none;
+  border-radius: 12px;
+  background: #4f46e5;
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+form button:hover {
+  background: #3730a3;
+}
+
+/* Progress Tracker */
+h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  background: #10b981;
+  color: white;
+  padding: 15px;
+  border-radius: 12px;
+  font-size: 1.2rem;
+}
+
+/* Task List */
+ul {
+  list-style: none;
+}
+
+li {
+  background: #f8fafc;
+  padding: 18px;
+  margin-bottom: 15px;
+  border-radius: 15px;
+  border-left: 6px solid #4f46e5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.3s;
+}
+
+li:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+li span {
+  font-size: 16px;
+  font-weight: 500;
+  color: #334155;
+}
+
+small {
+  color: #64748b;
+  margin-left: 8px;
+}
+
+/* Buttons */
+li button {
+  border: none;
+  padding: 10px 15px;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+  margin-left: 8px;
+  transition: 0.3s;
+}
+
+/* Complete Button */
+li button:first-child {
+  background: #10b981;
+}
+
+li button:first-child:hover {
+  background: #059669;
+}
+
+/* Delete Button */
+li button:last-child {
+  background: #ef4444;
+}
+
+li button:last-child:hover {
+  background: #dc2626;
+}
+
+/* Completed Task */
+.completed {
+  text-decoration: line-through;
+  color: #94a3b8;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 10px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .container {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  form {
+    flex-direction: column;
+  }
+
+  li {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
+}
